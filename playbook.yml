@@ -3,3 +3,4 @@
   roles:
    - { role: cmprescott.chrome, become: yes }
    - chromium
+   - fbreader

@@ -1,0 +1,7 @@
+---
+- name: Install FBReader
+  become: yes
+  apt:
+    name: fbreader
+    state: present
+    install_recommends: yes
