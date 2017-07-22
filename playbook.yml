@@ -1,6 +1,7 @@
 ---
 - hosts: localhost
   roles:
-   - { role: cmprescott.chrome, become: yes }
-   - chromium
-   - fbreader
+    - { role: cmprescott.chrome, become: yes }
+    - chromium
+    - fbreader
+    - { role: youtubedl, become: yes }

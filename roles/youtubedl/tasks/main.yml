@@ -1,0 +1,10 @@
+---
+- name: add youtube-dl ppa
+  apt_repository:
+    repo: 'ppa:nilarimogard/webupd8'
+    state: present
+
+- name: install youtube-dl
+  apt:
+    name: youtube-dl
+    state: present
