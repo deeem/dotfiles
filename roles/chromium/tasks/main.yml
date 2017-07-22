@@ -1,0 +1,7 @@
+---
+- name: Install Chromium Browser
+  become: yes
+  apt:
+    name: chromium-browser
+    state: present
+    install_recommends: yes
