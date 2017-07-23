@@ -1,0 +1,10 @@
+---
+- name: add mpv ppa
+  apt_repository:
+    repo: 'ppa:mc3man/mpv-tests'
+    state: present
+
+- name: install mpv
+  apt:
+    name: mpv
+    state: present
