@@ -1,0 +1,24 @@
+---
+- name: Set keyboard layouts
+  command: gsettings set org.gnome.desktop.input-sources sources '[("xkb", "us"), ("xkb", "ru")]'
+
+- name: Set Locale settings
+  become: yes
+  command: update-locale "{{ item }}"
+  with_items:
+    - "LC_NUMERIC=en_GB.UTF-8"
+    - "LC_TIME=en_GB.UTF-8"
+    - "LC_MONETARY=en_GB.UTF-8"
+    - "LC_PAPER=en_GB.UTF-8"
+    - "LC_NAME=en_GB.UTF-8"
+    - "LC_ADDRESS=en_GB.UTF-8"
+    - "LC_TELEPHONE=en_GB.UTF-8"
+    - "LC_MEASUREMENT=en_GB.UTF-8"
+    - "LC_IDENTIFICATION=en_GB.UTF-8"
+
+- name: Link dotfile: .profile
+  file:
+    src: "{{ dotfilespath }}/dotfiles/profile"
+    dest: "~/.profile"
+    state: link
+    force: yes
