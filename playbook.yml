@@ -8,3 +8,4 @@
     - { role: mpv, become: yes }
     - { role: mediatags, become: yes }
     - { role: php-coder.oraclejdk, become: yes }
+    - desktop
