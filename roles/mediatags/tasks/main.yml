@@ -1,0 +1,21 @@
+---
+- name: Add Kid3 ppa
+  apt_repository:
+    repo: 'ppa:ufleisch/kid3'
+    state: present
+
+- name:  Install Kid3-qt
+  apt:
+    name: kid3-qt
+    state: present
+
+- name: Add Flacon ppa
+  apt_repository:
+    repo: 'ppa:flacon/ppa'
+    state: present
+
+- name: Install Flacon
+  apt:
+    name: flacon
+    state: present
+    install_recommends: yes
