@@ -15,3 +15,10 @@
     - "LC_TELEPHONE=en_GB.UTF-8"
     - "LC_MEASUREMENT=en_GB.UTF-8"
     - "LC_IDENTIFICATION=en_GB.UTF-8"
+
+- name: Link dotfile: .profile
+  file:
+    src: "{{ dotfilespath }}/dotfiles/profile"
+    dest: "~/.profile"
+    state: link
+    force: yes
