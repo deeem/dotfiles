@@ -1,0 +1,12 @@
+---
+- name: Download PhpStorm
+  get_url:
+    url: "http://download.jetbrains.com/webide/PhpStorm-{{ phpstorm_version }}.tar.gz"
+    dest: "~/Downloads/PhpStorm-{{ phpstorm_version }}.tar.gz"
+
+- name: Unpack PhpStorm
+  become: yes
+  unarchive:
+    src: "~/Downloads/PhpStorm-{{ phpstorm_version }}.tar.gz"
+    dest: "/opt"
+    creates: "/opt/phpstorm-{{ phpstorm_version }}"
