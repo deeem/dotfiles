@@ -10,3 +10,4 @@
     - { role: php-coder.oraclejdk, become: yes }
     - desktop
     - phpstorm
+    - { role: atom, become: yes }
