@@ -15,6 +15,7 @@
 
 ## Заметки
 * PhpStorm устанавливается в `/opt/PhpStorm-{{ phpstorm_version }}`
+* инструкция по смеме тем [base16-gnome-terminal](https://github.com/aaron-williamson/base16-gnome-terminal)
 
 ### gpg
 #### import

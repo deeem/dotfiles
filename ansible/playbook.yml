@@ -12,3 +12,4 @@
     - phpstorm
     - { role: atom, become: yes }
     - git
+    - terminal
