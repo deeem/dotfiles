@@ -22,3 +22,18 @@
     dest: "~/.profile"
     state: link
     force: yes
+
+- name: Remove unnecessary packages
+  apt:
+    name: "{{ item }}"
+    state: absent
+  with_items:
+    - gnome-calendar
+    - cheese
+    - gnome-maps
+    - gnome-weather
+    - gnome-sudoku
+    - gnome-mines
+    - gnome-mahjongg
+    - aisleriot
+  become: yes
