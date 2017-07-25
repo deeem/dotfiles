@@ -1,0 +1,14 @@
+---
+- name: Install i3
+  apt:
+    name: i3
+    state: present
+    install_recommends: yes
+  become: yes
+
+- name: Link dotfiles i3
+  file:
+    src: "{{ dotfilespath }}/dotfiles/i3"
+    dest: "/home/{{ ansible_user_id }}/.i3"
+    state: link
+    force: yes
