@@ -1,15 +1,16 @@
 ---
 - hosts: localhost
   roles:
-    - { role: cmprescott.chrome, become: yes }
-    - chromium
-    - fbreader
-    - { role: youtubedl, become: yes }
-    - { role: mpv, become: yes }
-    - { role: mediatags, become: yes }
-    - { role: php-coder.oraclejdk, become: yes }
-    - desktop
-    - phpstorm
-    - { role: atom, become: yes }
-    - git
-    - terminal
+    # - { role: cmprescott.chrome, become: yes }
+    # - chromium
+    # - fbreader
+    # - { role: youtubedl, become: yes }
+    # - { role: mpv, become: yes }
+    # - { role: mediatags, become: yes }
+    # - { role: php-coder.oraclejdk, become: yes }
+    # - desktop
+    # - phpstorm
+    # - { role: atom, become: yes }
+    # - git
+    # - terminal
+    - goldendict
