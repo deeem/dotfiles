@@ -1,0 +1,35 @@
+- name: Install gconf2
+  apt:
+    name: gconf2
+    state: present
+  become: yes
+
+- name: Get base16-gnome-terminal
+  git:
+    repo: "https://github.com/aaron-williamson/base16-gnome-terminal.git"
+    dest: "~/.config/base16-gnome-terminal"
+
+- name: Install htop
+  become: yes
+  apt:
+    name: htop
+    state: present
+
+- name: Install nethogs
+  become: yes
+  apt:
+    name: nethogs
+    state: present
+
+- name: Install pass
+  become: yes
+  apt:
+    name: pass
+    state: present
+
+- name: Link dotfiles password-store
+  file:
+    src: "~/cloud/Dropbox/dotfiles/password-store"
+    dest: "~/.password-store"
+    state: link
+    force: yes

@@ -1,0 +1,37 @@
+---
+- name: Install Git
+  become: yes
+  apt:
+    name: git
+    state: present
+
+- name: Link dotfile gitconfig
+  file:
+    src: "{{ dotfilespath }}/dotfiles/gitconfig"
+    dest: "~/.gitconfig"
+    state: link
+    force: yes
+
+- name: Get git-completion
+  get_url:
+    url: "https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash"
+    dest: "~/.git-completion.bash"
+
+- name: Get git-prompt
+  get_url:
+    url: "https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh"
+    dest: "~/.git-prompt.sh"
+
+- name: Link dotfile bashrc
+  file:
+    src: "{{ dotfilespath }}/dotfiles/bashrc"
+    dest: "~/.bashrc"
+    state: link
+    force: yes
+
+- name: Link dotfile ssh
+  file:
+    src: "~/cloud/Dropbox/dotfiles/ssh"
+    dest: "~/.ssh"
+    state: link
+    force: yes

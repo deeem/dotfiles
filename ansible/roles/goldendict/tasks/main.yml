@@ -1,0 +1,6 @@
+---
+- name: Install GoldenDict
+  apt:
+    name: goldendict
+    state: present
+  become: yes

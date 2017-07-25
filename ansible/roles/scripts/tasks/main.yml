@@ -1,0 +1,17 @@
+---
+- name: Create .local-bin directory if not exists
+  file:
+    path: "~/.local/bin"
+    state: directory
+
+- name: Link dotfiles syncyutube
+  file:
+    src: "{{ dotfilespath }}/dotfiles/local-bin/syncyoutube"
+    dest: "~/.local/bin/syncyoutube"
+    state: link
+
+- name: Link dotfiles syncfiio
+  file:
+    src: "{{ dotfilespath }}/dotfiles/local-bin/syncfiio"
+    dest: "~/.local/bin/syncfiio"
+    state: link
