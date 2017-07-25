@@ -11,3 +11,4 @@
     - desktop
     - phpstorm
     - { role: atom, become: yes }
+    - git
