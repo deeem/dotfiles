@@ -20,4 +20,5 @@ fi
 PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 
 # kensigton middle click
-xinput --set-prop "Primax Kensington Eagle Trackball" "Evdev Middle Button Emulation" "1"
+#xinput --set-prop "Primax Kensington Eagle Trackball" "Evdev Middle Button Emulation" "1"
+xinput --set-prop "Primax Kensington Eagle Trackball" "libinput Middle Emulation Enabled" "1"
