@@ -1,7 +1,12 @@
 #!/bin/bash -e
 
-PRIMARY="DP2"
-EXT="HDMI1"
+# home setup
+#PRIMARY="DP2"
+#EXT="HDMI1"
+
+# work setup
+PRIMARY="HDMI1"
+EXT="HDMI2"
 
 if (xrandr | grep "$EXT connected"); then
     xrandr --output $PRIMARY --primary --auto --output $EXT --auto --right-of $PRIMARY
