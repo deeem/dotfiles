@@ -33,3 +33,10 @@
     dest: "~/.password-store"
     state: link
     force: yes
+
+- name: Install make
+  become: yes
+  apt:
+    name: make
+    state: present
+
