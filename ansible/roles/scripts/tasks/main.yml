@@ -10,8 +10,3 @@
     dest: "~/.local/bin/syncyoutube"
     state: link
 
-- name: Link dotfiles syncfiio
-  file:
-    src: "{{ dotfilespath }}/dotfiles/local-bin/syncfiio"
-    dest: "~/.local/bin/syncfiio"
-    state: link
