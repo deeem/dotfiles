@@ -9,7 +9,7 @@
     - { role: mediatags, become: yes }
     - { role: php-coder.oraclejdk, become: yes }
     - desktop
-    - phpstorm
+    - { role: phpstorm, tags: phpstorm }
     - { role: atom, become: yes }
     - git
     - terminal

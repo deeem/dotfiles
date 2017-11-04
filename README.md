@@ -13,6 +13,9 @@
 * `sudo ./install_ansible.sh` - устанавливает ansible
 * `sh ./bootstrap.sh` - запускает плейбук
 
+#### Run single role
+* ansible-playbook --ask-become-pass ansible/playbook.yml --tags="phpstorm" -i ansible/hosts --extra-vars "dotfilespath=`pwd`" - reinstall PhpStorm
+
 ## Заметки
 * PhpStorm устанавливается в `/opt/PhpStorm-{{ phpstorm_version }}`
 * инструкция по смеме тем [base16-gnome-terminal](https://github.com/aaron-williamson/base16-gnome-terminal)
