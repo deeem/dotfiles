@@ -1,4 +1,10 @@
 ---
+- name: Install vanilla Gnome
+  become: yes
+  apt:
+    name: vanilla-gnome-desktop
+    state: present
+
 - name: Set keyboard layouts
   command: gsettings set org.gnome.desktop.input-sources sources '[("xkb", "us"), ("xkb", "ru")]'
 
@@ -28,7 +34,7 @@
     name: "{{ item }}"
     state: absent
   with_items:
-    - gnome-calendar
+    - ubuntu-web-launchers
     - cheese
     - gnome-maps
     - gnome-weather
@@ -36,4 +42,8 @@
     - gnome-mines
     - gnome-mahjongg
     - aisleriot
+    - thunderbird
+    - gnome-power-manager
+    - rhythmbox
+    - gnome-photos
   become: yes
