@@ -14,8 +14,9 @@
 * `sh ./bootstrap.sh` - запускает плейбук
 
 #### Run single role
-* ```
-ansible-playbook --ask-become-pass ansible/playbook.yml --tags="phpstorm" -i ansible/hosts --extra-vars "dotfilespath=`pwd`" ``` - reinstall PhpStorm
+``
+ansible-playbook --ask-become-pass ansible/playbook.yml --tags="phpstorm" -i ansible/hosts --extra-vars "dotfilespath=`pwd`"
+``
 
 ## Заметки
 * PhpStorm устанавливается в `/opt/PhpStorm-{{ phpstorm_version }}`
