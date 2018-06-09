@@ -17,4 +17,5 @@
     - docker
     - scripts
     - i3
+    - { role: gantsign.visual-studio-code, become: yes }
 
