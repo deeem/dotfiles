@@ -10,7 +10,6 @@
     - { role: php-coder.oraclejdk, become: yes }
     - desktop
     - { role: phpstorm, tags: phpstorm }
-    - { role: atom, become: yes }
     - git
     - terminal
     - goldendict
