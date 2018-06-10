@@ -7,7 +7,7 @@
     - { role: youtubedl, become: yes }
     - { role: mpv, become: yes }
     - { role: mediatags, become: yes }
-    - { role: php-coder.oraclejdk, become: yes }
+    - { role: php-coder.oraclejdk, tags: phpstorm, become: yes }
     - desktop
     - { role: phpstorm, tags: phpstorm }
     - git
