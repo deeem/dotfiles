@@ -18,7 +18,7 @@
 
 - name: Add repository
   apt_repository:
-    repo: "deb [arch=amd64] https://download.docker.com/linux/ubuntu zesty stable"
+    repo: "deb [arch=amd64] https://download.docker.com/linux/ubuntu artful stable"
     state: present
   become: yes
 
@@ -45,3 +45,10 @@
   systemd:
     name: docker
     enabled: yes
+
+- name: Install Docker Compose
+  apt:
+    name: docker-compose
+    state: present
+  become: yes
+

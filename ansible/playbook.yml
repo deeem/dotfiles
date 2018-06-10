@@ -7,10 +7,9 @@
     - { role: youtubedl, become: yes }
     - { role: mpv, become: yes }
     - { role: mediatags, become: yes }
-    - { role: php-coder.oraclejdk, become: yes }
+    - { role: php-coder.oraclejdk, tags: phpstorm, become: yes }
     - desktop
     - { role: phpstorm, tags: phpstorm }
-    - { role: atom, become: yes }
     - git
     - terminal
     - goldendict
@@ -18,3 +17,5 @@
     - docker
     - scripts
     - i3
+    - { role: gantsign.visual-studio-code, become: yes }
+

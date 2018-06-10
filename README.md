@@ -2,12 +2,12 @@
 Мои dotfiles устанавливаемые с помощью ansible
 
 ## Requirements
-* Ubuntu 17.10
+* Ubuntu 18.04
 * git
 
 ## Install
 * установить и синхронизировать клиенты облачных хранилищ (приватный dotfiles `~/cloud/Dropbox/dotfiles`)
-* скачать содержимое этого репозитория и переименовать его в `.dotfiles`
+* `git clone https://github.com/deeem/dotfiles .dotfiles`
 * `sudo ./install_ansible.sh` - устанавливает ansible
 * `sh ./bootstrap.sh` - устанавливает все, кроме PhpStorm
 

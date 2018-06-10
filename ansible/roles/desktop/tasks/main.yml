@@ -1,9 +1,4 @@
 ---
-- name: Install vanilla Gnome
-  become: yes
-  apt:
-    name: vanilla-gnome-desktop
-    state: present
 
 - name: Set keyboard layouts
   command: gsettings set org.gnome.desktop.input-sources sources '[("xkb", "us"), ("xkb", "ru")]'
@@ -22,28 +17,3 @@
     - "LC_MEASUREMENT=en_GB.UTF-8"
     - "LC_IDENTIFICATION=en_GB.UTF-8"
 
-- name: Link dotfile .profile
-  file:
-    src: "{{ dotfilespath }}/dotfiles/profile"
-    dest: "~/.profile"
-    state: link
-    force: yes
-
-- name: Remove unnecessary packages
-  apt:
-    name: "{{ item }}"
-    state: absent
-  with_items:
-    - ubuntu-web-launchers
-    - cheese
-    - gnome-maps
-    - gnome-weather
-    - gnome-sudoku
-    - gnome-mines
-    - gnome-mahjongg
-    - aisleriot
-    - thunderbird
-    - gnome-power-manager
-    - rhythmbox
-    - gnome-photos
-  become: yes
