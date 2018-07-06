@@ -18,4 +18,4 @@
     - scripts
     - i3
     - { role: gantsign.visual-studio-code, become: yes }
-
+    - { role: geerlingguy.nodejs, become: yes }
