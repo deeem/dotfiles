@@ -1,4 +1,0 @@
-#!/bin/bash
-FIIO="1822-D3F2"
-rsync -rout --force --delete --stats --progress --modify-window=2 ~/cloud/Yandex/Музыка/tracks/ /media/dima/$FIIO/tracks
-rsync -rout --force --delete --stats --progress --modify-window=2 ~/cloud/Yandex/Музыка/albums/ /media/dima/$FIIO/albums

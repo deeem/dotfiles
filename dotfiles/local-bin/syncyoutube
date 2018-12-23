@@ -1,3 +1,0 @@
-#!/bin/bash
-
-youtube-dl -f '299+140/298+140/best' -o '~/Videos/%(title)s.%(ext)s' https://www.youtube.com/playlist?list=PLzE3hYpb_6DM05Ocduxl0hAls0K1Rcldp
