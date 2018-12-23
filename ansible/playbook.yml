@@ -1,11 +1,11 @@
 ---
 - hosts: localhost
   roles:
-    - { role: cmprescott.chrome, become: yes }
+   # - { role: cmprescott.chrome, become: yes }
     - chromium
     - fbreader
     - { role: youtubedl, become: yes }
-    - { role: mpv, become: yes }
+   # - { role: mpv, become: yes }
     - { role: mediatags, become: yes }
     - desktop
     - git
@@ -14,4 +14,4 @@
     - vim
     - docker
     - { role: gantsign.visual-studio-code, become: yes }
-    - { role: geerlingguy.nodejs, become: yes }
+
