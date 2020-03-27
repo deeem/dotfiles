@@ -6,7 +6,7 @@
    # - fbreader
     - { role: youtubedl, become: yes }
    # - { role: mpv, become: yes }
-    - { role: mediatags, become: yes }
+   # - { role: mediatags, become: yes }
     - desktop
    # - git
     - terminal
