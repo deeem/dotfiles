@@ -1,5 +1,11 @@
 ---
 
+- name: Install gconf2
+  apt:
+    name: gconf2
+    state: present
+  become: yes
+
 - name: Set keyboard layouts
   command: gsettings set org.gnome.desktop.input-sources sources '[("xkb", "us"), ("xkb", "ru")]'
 
